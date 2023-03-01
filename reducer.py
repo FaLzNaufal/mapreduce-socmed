@@ -15,7 +15,7 @@ for line in sys.stdin:
 
 with open('output.csv', 'w', newline='') as csvfile:
     writer = csv.writer(csvfile, delimiter=',')
-    writer.writerow(['specific_resource_type', 'date', 'count'])
+    # writer.writerow(['specific_resource_type', 'date', 'count'])
     for specific_resource_type in counts:
             for date in counts[specific_resource_type]:
                 writer.writerow([specific_resource_type, date, counts[specific_resource_type][date]])
