@@ -18,4 +18,5 @@ with open('output.csv', 'w', newline='') as csvfile:
     # writer.writerow(['specific_resource_type', 'date', 'count'])
     for specific_resource_type in counts:
             for date in counts[specific_resource_type]:
+                print(f'{specific_resource_type}\t{date}\t{counts[specific_resource_type][date]}')
                 writer.writerow([specific_resource_type, date, counts[specific_resource_type][date]])
